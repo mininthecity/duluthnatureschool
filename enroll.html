@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll — Duluth Nature School</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="playgroups.html">Playgroups</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="fundraising.html">Fundraising</a>
+    </div>
+    <div class="nav-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Duluth Nature School"></a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/duluthnatureschool" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://www.facebook.com/duluthnatureschool" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+      </div>
+      <a href="enroll.html" class="btn">Enroll</a>
+      <button class="nav-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- PASSWORD GATE -->
+  <div id="password-gate" class="password-gate">
+    <div class="lock-icon">🔒</div>
+    <h2>Invited Families Only</h2>
+    <p style="color: var(--text-light); margin-top: 0.5rem;">Enter the password Rachael provided to access enrollment.</p>
+    <input
+      type="password"
+      id="password-input"
+      class="password-input"
+      placeholder="Enter password"
+      autocomplete="off"
+    >
+    <button id="password-btn" class="btn" style="width: 100%;">Enter</button>
+    <p id="password-error" class="password-error">Incorrect password. Please try again.</p>
+  </div>
+
+  <!-- ENROLLMENT CONTENT (hidden until password entered) -->
+  <div id="enroll-content" class="enroll-content">
+
+    <div class="section">
+      <h1>Enrollment</h1>
+      <p>Welcome! Please complete both steps below: fill out the enrollment form, then pay your tuition using the button that matches your semester and schedule.</p>
+
+      <!-- STEP 1: ENROLLMENT FORM -->
+      <h2 style="margin-top: 2rem;">Step 1: Enrollment Form</h2>
+      <div class="form-section">
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+
+          <div class="form-group">
+            <label class="form-label" for="parent-name">Parent / Guardian Name *</label>
+            <input class="form-input" type="text" id="parent-name" name="parent_name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number *</label>
+            <input class="form-input" type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input class="form-input" type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="child-name">Child's Name *</label>
+            <input class="form-input" type="text" id="child-name" name="child_name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="child-dob">Child's Date of Birth *</label>
+            <input class="form-input" type="date" id="child-dob" name="child_dob" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="semester">Semester Enrolling For *</label>
+            <select class="form-input" id="semester" name="semester" required>
+              <option value="">— Select a semester —</option>
+              <option value="Summer 2026">Summer Playgroups 2026</option>
+              <option value="Fall 2026">Fall Semester (Sep 14 – Dec 17, 2026)</option>
+              <option value="Winter 2027">Winter Semester (Jan 4 – Mar 25, 2027)</option>
+              <option value="Spring 2027">Spring Semester (Apr 12 – Jun 4, 2027)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Days Requested *</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Monday"> Monday
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Tuesday"> Tuesday
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Wednesday"> Wednesday
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Thursday"> Thursday
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn" style="margin-top: 0.5rem;">Submit Enrollment Form</button>
+        </form>
+      </div>
+
+      <!-- STEP 2: PAY TUITION -->
+      <h2 style="margin-top: 3rem;">Step 2: Pay Tuition</h2>
+      <p>Click the Pay button that matches your semester and the number of days per week your child will attend. You'll be taken to a secure Stripe payment page.</p>
+
+      <div class="pay-section">
+        <div class="table-wrap">
+          <table class="pay-table">
+            <thead>
+              <tr>
+                <th>Semester</th>
+                <th>1 Day/Week</th>
+                <th>2 Days/Week</th>
+                <th>3 Days/Week</th>
+                <th>4 Days/Week</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fall 2026</strong><br><small>Sep 14 – Dec 17</small></td>
+                <td><a href="#" class="pay-btn">$530</a></td>
+                <td><a href="#" class="pay-btn">$1,050</a></td>
+                <td><a href="#" class="pay-btn">$1,570</a></td>
+                <td><a href="#" class="pay-btn">$2,090</a></td>
+              </tr>
+              <tr>
+                <td><strong>Winter 2027</strong><br><small>Jan 4 – Mar 25</small></td>
+                <td><a href="#" class="pay-btn">$490</a></td>
+                <td><a href="#" class="pay-btn">$970</a></td>
+                <td><a href="#" class="pay-btn">$1,450</a></td>
+                <td><a href="#" class="pay-btn">$1,930</a></td>
+              </tr>
+              <tr>
+                <td><strong>Spring 2027</strong><br><small>Apr 12 – Jun 4</small></td>
+                <td><a href="#" class="pay-btn">$330</a></td>
+                <td><a href="#" class="pay-btn">$650</a></td>
+                <td><a href="#" class="pay-btn">$970</a></td>
+                <td><a href="#" class="pay-btn">$1,290</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; margin-top: 1rem;">Summer 2026 pricing and payment links will be added when dates are confirmed.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    Kenwood Neighborhood, Duluth, MN 55811 &nbsp;|&nbsp; (218) 216-7876 &nbsp;|&nbsp;
+    <a href="mailto:info@duluthnatureschool.org">info@duluthnatureschool.org</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
