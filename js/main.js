@@ -54,6 +54,41 @@ if (gate) {
   });
 }
 
+// ===== SUMMER PASSWORD GATE =====
+const SUMMER_PASSWORD = 'GetOutside2026';
+const SUMMER_SESSION_KEY = 'dns_summer';
+
+const summerGate = document.getElementById('summer-gate');
+const summerContent = document.getElementById('summer-content');
+const summerPasswordInput = document.getElementById('summer-password-input');
+const summerPasswordBtn = document.getElementById('summer-password-btn');
+const summerPasswordError = document.getElementById('summer-password-error');
+
+if (summerGate) {
+  if (sessionStorage.getItem(SUMMER_SESSION_KEY) === 'true') {
+    summerGate.style.display = 'none';
+    summerContent.style.display = 'block';
+  }
+
+  function checkSummerPassword() {
+    if (summerPasswordInput.value.trim() === SUMMER_PASSWORD) {
+      sessionStorage.setItem(SUMMER_SESSION_KEY, 'true');
+      summerGate.style.display = 'none';
+      summerContent.style.display = 'block';
+    } else {
+      summerPasswordError.style.display = 'block';
+      summerPasswordInput.value = '';
+      summerPasswordInput.focus();
+    }
+  }
+
+  summerPasswordBtn.addEventListener('click', checkSummerPassword);
+  summerPasswordInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') checkSummerPassword();
+    summerPasswordError.style.display = 'none';
+  });
+}
+
 // ===== GALLERY LIGHTBOX =====
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
