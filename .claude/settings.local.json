@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(rsync:*)",
+      "Bash(open:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i '' 's|<link rel=\"\"stylesheet\"\" href=\"\"css/style.css\"\">|<link rel=\"\"stylesheet\"\" href=\"\"css/style.css\"\">\\\\n  <link rel=\"\"stylesheet\"\" href=\"\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css\"\">|' \"$f\")",
+      "Bash(done)",
+      "Bash(sed -i '' 's|>📷</a>|><i class=\"\"fab fa-instagram\"\"></i></a>|g' \"$f\")",
+      "Bash(sed -i '' 's|>📘</a>|><i class=\"\"fab fa-facebook-f\"\"></i></a>|g' \"$f\")",
+      "Bash(grep -l \"fa-instagram\" /Users/rachael/projects/duluthnatureschool_org/*.html)",
+      "Bash(/Users/rachael/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/skills/brainstorming/scripts/start-server.sh *)",
+      "Bash(dig duluthnatureschool.org A +short)",
+      "Bash(dig www.duluthnatureschool.org A +short)",
+      "Bash(curl *)",
+      "Bash(dig *)",
+      "WebSearch",
+      "WebFetch(domain:knowledge.workspace.google.com)",
+      "WebFetch(domain:support.squarespace.com)",
+      "WebFetch(domain:support.google.com)",
+      "WebFetch(domain:forum.squarespace.com)"
+    ]
+  }
+}
