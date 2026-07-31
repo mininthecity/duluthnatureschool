@@ -85,12 +85,15 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="semester">Semester Enrolling For *</label>
+            <label class="form-label" for="semester">Program &amp; Semester Enrolling For *</label>
             <select class="form-input" id="semester" name="semester" required>
-              <option value="">— Select a semester —</option>
-              <option value="Fall 2026">Fall Semester (Sep 14 – Dec 17, 2026)</option>
-              <option value="Winter 2027">Winter Semester (Jan 4 – Mar 25, 2027)</option>
-              <option value="Spring 2027">Spring Semester (Apr 12 – Jun 4, 2027)</option>
+              <option value="">— Select a program &amp; semester —</option>
+              <option value="Fall 2026 - Morning Sessions">Fall 2026 – Morning Sessions (Sep 14 – Dec 17)</option>
+              <option value="Winter 2027 - Morning Sessions">Winter 2027 – Morning Sessions (Jan 4 – Mar 25)</option>
+              <option value="Spring 2027 - Morning Sessions">Spring 2027 – Morning Sessions (Apr 12 – Jun 4)</option>
+              <option value="Fall 2026 - Homeschool Enrichment">Fall 2026 – Homeschool Enrichment (Sep 14 – Dec 17)</option>
+              <option value="Winter 2027 - Homeschool Enrichment">Winter 2027 – Homeschool Enrichment (Jan 4 – Mar 25)</option>
+              <option value="Spring 2027 - Homeschool Enrichment">Spring 2027 – Homeschool Enrichment (Apr 12 – Jun 4)</option>
             </select>
           </div>
 
@@ -118,9 +121,10 @@
 
       <!-- STEP 2: PAY TUITION -->
       <h2 style="margin-top: 3rem;">Step 2: Pay Tuition</h2>
-      <p>Click the Pay button that matches your semester and the number of days per week your child will attend. You'll be taken to a secure Stripe payment page.</p>
+      <p>Click the Pay button that matches your program, semester, and the number of days per week your child will attend. You'll be taken to a secure Stripe payment page.</p>
 
       <div class="pay-section">
+        <h3 style="margin-top: 1.5rem;">Morning Sessions</h3>
         <div class="table-wrap">
           <table class="pay-table">
             <thead>
@@ -128,8 +132,6 @@
                 <th>Semester</th>
                 <th>1 Day/Week</th>
                 <th>2 Days/Week</th>
-                <th>3 Days/Week</th>
-                <th>4 Days/Week</th>
               </tr>
             </thead>
             <tbody>
@@ -137,22 +139,55 @@
                 <td><strong>Fall 2026</strong><br><small>Sep 14 – Dec 17</small></td>
                 <td><a href="#" class="pay-btn">$530</a></td>
                 <td><a href="#" class="pay-btn">$1,050</a></td>
-                <td><a href="#" class="pay-btn">$1,570</a></td>
-                <td><a href="#" class="pay-btn">$2,090</a></td>
               </tr>
               <tr>
                 <td><strong>Winter 2027</strong><br><small>Jan 4 – Mar 25</small></td>
                 <td><a href="#" class="pay-btn">$490</a></td>
                 <td><a href="#" class="pay-btn">$970</a></td>
-                <td><a href="#" class="pay-btn">$1,450</a></td>
-                <td><a href="#" class="pay-btn">$1,930</a></td>
               </tr>
               <tr>
                 <td><strong>Spring 2027</strong><br><small>Apr 12 – Jun 4</small></td>
                 <td><a href="#" class="pay-btn">$330</a></td>
                 <td><a href="#" class="pay-btn">$650</a></td>
-                <td><a href="#" class="pay-btn">$970</a></td>
-                <td><a href="#" class="pay-btn">$1,290</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Homeschool Enrichment</h3>
+        <p style="font-size: 0.85rem; color: var(--text-light);">Enrolling a sibling? Each additional child receives 30% off — use the sibling columns below.</p>
+        <div class="table-wrap">
+          <table class="pay-table">
+            <thead>
+              <tr>
+                <th>Semester</th>
+                <th>1 Day/Week</th>
+                <th>2 Days/Week</th>
+                <th>Sibling, 1 Day/Week</th>
+                <th>Sibling, 2 Days/Week</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fall 2026</strong><br><small>Sep 14 – Dec 17</small></td>
+                <td><a href="#" class="pay-btn">$812</a></td>
+                <td><a href="#" class="pay-btn">$1,624</a></td>
+                <td><a href="#" class="pay-btn">$560</a></td>
+                <td><a href="#" class="pay-btn">$1,120</a></td>
+              </tr>
+              <tr>
+                <td><strong>Winter 2027</strong><br><small>Jan 4 – Mar 25</small></td>
+                <td><a href="#" class="pay-btn">$696</a></td>
+                <td><a href="#" class="pay-btn">$1,392</a></td>
+                <td><a href="#" class="pay-btn">$480</a></td>
+                <td><a href="#" class="pay-btn">$960</a></td>
+              </tr>
+              <tr>
+                <td><strong>Spring 2027</strong><br><small>Apr 12 – Jun 4</small></td>
+                <td><a href="#" class="pay-btn">$464</a></td>
+                <td><a href="#" class="pay-btn">$928</a></td>
+                <td><a href="#" class="pay-btn">$320</a></td>
+                <td><a href="#" class="pay-btn">$640</a></td>
               </tr>
             </tbody>
           </table>
