@@ -51,7 +51,7 @@
 
     <div class="section">
       <h1>Enrollment</h1>
-      <p>Welcome! Please complete the three steps below: fill out the enrollment form, pay your $125 deposit to hold your spot, then pay your tuition using the button that matches your semester and schedule.</p>
+      <p>Welcome! Please complete the steps below: fill out the enrollment form with your preferred schedule, then pay your $125 deposit to hold your spot. We'll follow up with a custom tuition invoice once your schedule and session availability are confirmed.</p>
 
       <!-- STEP 1: ENROLLMENT FORM -->
       <h2 style="margin-top: 2rem;">Step 1: Enrollment Form</h2>
@@ -84,34 +84,44 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="semester">Program &amp; Semester Enrolling For *</label>
+            <label class="form-label" for="semester">Semester Enrolling For *</label>
             <select class="form-input" id="semester" name="semester" required>
-              <option value="">— Select a program &amp; semester —</option>
-              <option value="Fall 2026 - Morning Sessions">Fall 2026 – Morning Sessions (Sep 14 – Dec 17)</option>
-              <option value="Winter 2027 - Morning Sessions">Winter 2027 – Morning Sessions (Jan 4 – Mar 25)</option>
-              <option value="Spring 2027 - Morning Sessions">Spring 2027 – Morning Sessions (Apr 12 – Jun 4)</option>
-              <option value="Fall 2026 - Extended Days">Fall 2026 – Extended Days (Sep 14 – Dec 17)</option>
-              <option value="Winter 2027 - Extended Days">Winter 2027 – Extended Days (Jan 4 – Mar 25)</option>
-              <option value="Spring 2027 - Extended Days">Spring 2027 – Extended Days (Apr 12 – Jun 4)</option>
+              <option value="">— Select a semester —</option>
+              <option value="Fall 2026">Fall 2026 (Sep 14 – Dec 17)</option>
+              <option value="Winter 2027">Winter 2027 (Jan 4 – Mar 25)</option>
+              <option value="Spring 2027">Spring 2027 (Apr 12 – Jun 4)</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Days Requested *</label>
+            <label class="form-label">Morning Session Days (8:30–11:30am)</label>
             <div class="checkbox-group">
               <label class="checkbox-label">
-                <input type="checkbox" name="days" value="Monday"> Monday
+                <input type="checkbox" name="morning_days" value="Monday"> Monday
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" name="days" value="Tuesday"> Tuesday
+                <input type="checkbox" name="morning_days" value="Tuesday"> Tuesday
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" name="days" value="Wednesday"> Wednesday
+                <input type="checkbox" name="morning_days" value="Wednesday"> Wednesday
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" name="days" value="Thursday"> Thursday
+                <input type="checkbox" name="morning_days" value="Thursday"> Thursday
               </label>
             </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Extended Days (8:30am–2:30pm)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="extended_days" value="Tuesday"> Tuesday
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="extended_days" value="Thursday"> Thursday
+              </label>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">Extended Days already include the morning portion — if Tuesday or Thursday is checked here, don't also check it above.</p>
           </div>
 
           <button type="submit" class="btn" style="margin-top: 0.5rem;">Submit Enrollment Form</button>
@@ -125,79 +135,7 @@
 
       <!-- STEP 3: PAY TUITION -->
       <h2 style="margin-top: 3rem;">Step 3: Pay Tuition</h2>
-      <p>Tuition is due two weeks before your semester begins. Click the Pay button that matches your program, semester, and the number of days per week your child will attend. You'll be taken to a secure Stripe payment page.</p>
-
-      <div class="pay-section">
-        <h3 style="margin-top: 1.5rem;">Morning Sessions</h3>
-        <p style="font-size: 0.85rem; color: var(--text-light);">Enrolling more than one child in this program? Pay separately for each child: full price for your first child, then use promo code SIBLING at checkout for each additional child (30% off).</p>
-        <div class="table-wrap">
-          <table class="pay-table">
-            <thead>
-              <tr>
-                <th>Semester</th>
-                <th>1 Day/Week</th>
-                <th>2 Days/Week</th>
-                <th>3 Days/Week</th>
-                <th>4 Days/Week</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Fall 2026</strong><br><small>Sep 14 – Dec 17</small></td>
-                <td><a href="https://buy.stripe.com/00w8wQbcmfGFf3m42M2go05" class="pay-btn" target="_blank" rel="noopener">$530</a></td>
-                <td><a href="https://buy.stripe.com/6oU00kdku8edg7q56Q2go06" class="pay-btn" target="_blank" rel="noopener">$1,050</a></td>
-                <td><a href="https://buy.stripe.com/8x200k5S2cut08s2YI2go07" class="pay-btn" target="_blank" rel="noopener">$1,570</a></td>
-                <td><a href="https://buy.stripe.com/14A28s2FQamlf3mfLu2go08" class="pay-btn" target="_blank" rel="noopener">$2,090</a></td>
-              </tr>
-              <tr>
-                <td><strong>Winter 2027</strong><br><small>Jan 4 – Mar 25</small></td>
-                <td><a href="https://buy.stripe.com/00w8wQ80a2TT9J2dDm2go0f" class="pay-btn" target="_blank" rel="noopener">$490</a></td>
-                <td><a href="https://buy.stripe.com/8x200k1BM0LL2gAara2go0g" class="pay-btn" target="_blank" rel="noopener">$970</a></td>
-                <td><a href="https://buy.stripe.com/aFa4gA3JU5217AU7eY2go0h" class="pay-btn" target="_blank" rel="noopener">$1,450</a></td>
-                <td><a href="https://buy.stripe.com/00w5kE3JU0LLaN6fLu2go0i" class="pay-btn" target="_blank" rel="noopener">$1,930</a></td>
-              </tr>
-              <tr>
-                <td><strong>Spring 2027</strong><br><small>Apr 12 – Jun 4</small></td>
-                <td><a href="https://buy.stripe.com/dRmfZi0xIaml7AU7eY2go0j" class="pay-btn" target="_blank" rel="noopener">$330</a></td>
-                <td><a href="https://buy.stripe.com/aFa5kEbcm3XX9J256Q2go0k" class="pay-btn" target="_blank" rel="noopener">$650</a></td>
-                <td><a href="https://buy.stripe.com/9B69AU6W6eCBcVe1UE2go0l" class="pay-btn" target="_blank" rel="noopener">$970</a></td>
-                <td><a href="https://buy.stripe.com/dRm5kE94e9ih4oI8j22go0m" class="pay-btn" target="_blank" rel="noopener">$1,290</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3 style="margin-top: 2rem;">Extended Days</h3>
-        <p style="font-size: 0.85rem; color: var(--text-light);">Enrolling more than one child in this program? Pay separately for each child: full price for your first child, then use promo code SIBLING at checkout for each additional child (30% off).</p>
-        <div class="table-wrap">
-          <table class="pay-table">
-            <thead>
-              <tr>
-                <th>Semester</th>
-                <th>1 Day/Week</th>
-                <th>2 Days/Week</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Fall 2026</strong><br><small>Sep 14 – Dec 17</small></td>
-                <td><a href="https://buy.stripe.com/cNifZi1BM0LL2gA2YI2go09" class="pay-btn" target="_blank" rel="noopener">$812</a></td>
-                <td><a href="https://buy.stripe.com/8x29AUdku2TT1cwbve2go0a" class="pay-btn" target="_blank" rel="noopener">$1,624</a></td>
-              </tr>
-              <tr>
-                <td><strong>Winter 2027</strong><br><small>Jan 4 – Mar 25</small></td>
-                <td><a href="https://buy.stripe.com/9B66oIcgq9ih7AUfLu2go0b" class="pay-btn" target="_blank" rel="noopener">$696</a></td>
-                <td><a href="https://buy.stripe.com/aFa4gA2FQcut08s8j22go0c" class="pay-btn" target="_blank" rel="noopener">$1,392</a></td>
-              </tr>
-              <tr>
-                <td><strong>Spring 2027</strong><br><small>Apr 12 – Jun 4</small></td>
-                <td><a href="https://buy.stripe.com/3cI8wQcgqcut5sM1UE2go0d" class="pay-btn" target="_blank" rel="noopener">$464</a></td>
-                <td><a href="https://buy.stripe.com/00w9AUbcm6657AU1UE2go0e" class="pay-btn" target="_blank" rel="noopener">$928</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <p>Tuition is billed per day based on your confirmed schedule: <strong>$40/day</strong> for Morning Sessions and <strong>$60/day</strong> for Extended Days. Once your schedule and session availability are confirmed, we'll send a custom invoice for the semester with your $125 deposit already credited. Enrolling more than one child? You'll pay separately for each child: full price for your first child, and 30% off for each additional child. Tuition is due two weeks before your semester begins.</p>
 
     </div>
   </div>
