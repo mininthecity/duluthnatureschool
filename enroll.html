@@ -53,6 +53,8 @@
       <h1>Enrollment</h1>
       <p>Welcome! Please complete the steps below: fill out the enrollment form with your preferred schedule, then pay your $125 deposit to hold your spot. We'll follow up with a custom tuition invoice once your schedule and session availability are confirmed.</p>
 
+      <p style="margin-top: 0.75rem;">Enrollment below is for the Fall 2026 semester. Interested in Winter or Spring? Currently enrolled students will be placed first, with remaining spots filled from the waitlist. <a href="https://docs.google.com/forms/d/e/1FAIpQLSct05Ln7AxzTciEl3DgCRTDCHGw_ZYd-DWiJXUZObcVWbnqHw/viewform" target="_blank" rel="noopener">Join the Winter/Spring Waitlist →</a></p>
+
       <!-- STEP 1: ENROLLMENT FORM -->
       <h2 style="margin-top: 2rem;">Step 1: Enrollment Form</h2>
       <div class="form-section">
@@ -84,13 +86,9 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="semester">Semester Enrolling For *</label>
-            <select class="form-input" id="semester" name="semester" required>
-              <option value="">— Select a semester —</option>
-              <option value="Fall 2026">Fall 2026 (Sep 14 – Dec 17)</option>
-              <option value="Winter 2027">Winter 2027 (Jan 4 – Mar 25)</option>
-              <option value="Spring 2027">Spring 2027 (Apr 12 – Jun 4)</option>
-            </select>
+            <label class="form-label">Semester Enrolling For</label>
+            <p style="margin: 0.25rem 0 0;">Fall 2026 (Sep 14 – Dec 17)</p>
+            <input type="hidden" name="semester" value="Fall 2026">
           </div>
 
           <div class="form-group">
